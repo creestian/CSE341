@@ -1,0 +1,9 @@
+# ---Test the SERVER 
+GET http://localhost:8080
+# --Test ALL USERS
+GET http://localhost:8080/users
+# ---Render ALL USERS---
+GET https://creestian.onrender.com/users
+# ---Render SINGLE USER
+GET https://creestian.onrender.com/users/66f1c02e976a8ebadc7cce9b
+
