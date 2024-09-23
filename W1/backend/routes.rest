@@ -1,4 +1,4 @@
-GET http://localhost:8080/professional
+GET http://localhost:8080/
 # the request above returns a json object with all professional data for Nathan Birch. No database is connected.
 # --Test ALL USERS
 GET http://localhost:8080/users
