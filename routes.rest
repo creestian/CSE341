@@ -1,9 +1,43 @@
 # ---Test the SERVER 
 GET http://localhost:8080
 # --Test ALL USERS
+
 GET http://localhost:8080/users
+
+# --Test SINGLE USER
+
+GET http://localhost:8080/users/66f1c02e976a8ebadc7cce9b
 # ---Render ALL USERS---
+
 GET https://creestian.onrender.com/users
 # ---Render SINGLE USER
+
 GET https://creestian.onrender.com/users/66f1c02e976a8ebadc7cce9b
 
+# ---Create a contact---
+
+POST http://localhost:8080/users HTTP/1.1
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john.doe@example.com",
+  "favoriteColor": "blue",
+  "birthday": "1990-01-01"
+}
+
+### Update a contact
+PUT http://localhost:8080/users/66f1c02e976a8ebadc7cce9b HTTP/1.1
+Content-Type: application/json
+
+{
+  "firstName": "Malena",
+  "lastName": "Rodriguez Crisol",
+  "email": "mrodriguezcrisol@gmail.com",
+  "favoriteColor": "green",
+  "birthday": "27/09/1987"
+}
+
+### Delete a contact
+DELETE http://localhost:3000/users/users_id
