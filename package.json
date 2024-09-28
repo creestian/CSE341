@@ -20,7 +20,10 @@
   "dependencies": {
     "dotenv": "^16.4.5",
     "express": "^4.21.0",
+    "fetch": "^1.1.0",
     "mongo": "^0.1.0",
-    "mongodb": "^6.9.0"
+    "mongodb": "^6.9.0",
+    "node": "^22.9.0",
+    "node-fetch": "^3.3.2"
   }
 }
