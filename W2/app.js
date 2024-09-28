@@ -7,7 +7,7 @@ const app = express();
 
 app.use(express.json());
 
-mongoose.connect('your_mongodb_connection_string', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb+srv://creestian:KGTxJCc6wYcAemPn@cluster0.0e2g5.mongodb.net/project1', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB Connected'))
   .catch((err) => console.log(err));
 
@@ -19,7 +19,7 @@ const contactSchema = new mongoose.Schema({
   birthday: { type: Date, required: true }
 });
 
-const Contact = mongoose.model('Contact', contactSchema);
+const Contact = mongoose.model('users', contactSchema);
 
 // POST Route to create a new contact
 app.post('/contacts', async (req, res) => {
