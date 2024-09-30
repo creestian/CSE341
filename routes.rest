@@ -1,43 +1,41 @@
-# ---Test the SERVER 
+### ---Test the SERVER 
 GET http://localhost:8080
-# --Test ALL USERS
 
+### --Test ALL USERS
 GET http://localhost:8080/users
 
-# --Test SINGLE USER
+### --Test SINGLE USER
+GET http://localhost:8080/users/66f9edd66ce49c34a9b87886
 
-GET http://localhost:8080/users/66f1c02e976a8ebadc7cce9b
-# ---Render ALL USERS---
-
+### ---Render ALL USERS---
 GET https://creestian.onrender.com/users
-# ---Render SINGLE USER
 
-GET https://creestian.onrender.com/users/66f1c02e976a8ebadc7cce9b
+### ---Render SINGLE USER
+GET https://creestian.onrender.com/users/66f9edd66ce49c34a9b87886
 
-# ---Create a contact---
-
+### ---Create a contact---
 POST http://localhost:8080/users HTTP/1.1
 Content-Type: application/json
 
 {
-  "firstName": "John",
-  "lastName": "Doe",
-  "email": "john.doe@example.com",
-  "favoriteColor": "blue",
-  "birthday": "1990-01-01"
+  "firstName":"Diego",
+  "lastName":"Gomez",
+  "email":"diego@gmail.com",
+  "favoriteColor":"rosita",
+  "birthday":"05/03/1978"
 }
 
 ### Update a contact
-PUT http://localhost:8080/users/66f1c02e976a8ebadc7cce9b HTTP/1.1
+PUT http://localhost:8080/users/66f9edd66ce49c34a9b87886 HTTP/1.1
 Content-Type: application/json
 
 {
-  "firstName": "Malena",
-  "lastName": "Rodriguez Crisol",
-  "email": "mrodriguezcrisol@gmail.com",
-  "favoriteColor": "green",
-  "birthday": "27/09/1987"
+  "firstName": "Diego",
+  "lastName": "Gomez",
+  "email": "diego@gmail.com",
+  "favoriteColor": "rosa",
+  "birthday": "05/03/1978"
 }
 
 ### Delete a contact
-DELETE http://localhost:3000/users/users_id
+DELETE http://localhost:8080/users/66f9ec17861a65118a55af3f HTTP/1.1
